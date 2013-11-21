@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="8dp">
+
+    <TextView
+            android:id="@+id/champions_details_list_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="4dp"
+            android:layout_gravity="right"
+            android:textStyle="bold"
+            tools:text="19:20"/>
+
+    <TextView
+            android:id="@+id/champions_details_list_item_tweet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/champions_details_list_item_time"
+            android:paddingBottom="16dp"
+            android:textSize="17sp"
+            tools:text="Text Text Text Text"/>
+
+</RelativeLayout>
+

@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="16dp">
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hash Tags"/>
+
+    <EditText
+            android:id="@+id/config_hash_tags"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            tools:text="#androiddev"/>
+
+    <CheckBox
+            android:id="@+id/config_mock_twitter_service_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mock TwitterService"
+            android:layout_marginBottom="8dp"/>
+
+    <CheckBox
+            android:id="@+id/config_mock_write_logs_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Write Logs"/>
+
+    <CheckBox
+            android:id="@+id/config_mock_enable_crashlytics_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Enable Crashlytics"/>
+
+    <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    <Button
+            android:id="@+id/config_apply_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Apply"/>
+
+</LinearLayout>
+

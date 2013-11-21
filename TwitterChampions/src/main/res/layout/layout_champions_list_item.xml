@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:padding="8dp">
+
+
+    <ImageView
+            android:id="@+id/champions_list_item_avatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="8dp"
+            tools:src="@drawable/ic_launcher"/>
+
+    <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/champions_list_item_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    tools:text="Alex Korovyansky"/>
+
+            <TextView
+                    android:id="@+id/champions_list_item_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="19sp"
+                    android:layout_marginBottom="4dp"
+                    tools:text="@korovyansk"/>
+
+            <TextView
+                    android:id="@+id/champions_list_item_tweets_highlight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:singleLine="true"
+                    tools:text="Слово1. Слово2. Слово3. Слово4. Слово5. Слово6. Слово7."/>
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/champions_list_item_tweets_counter"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:background="#99ffff00"
+                android:gravity="center"
+                tools:text="10"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+

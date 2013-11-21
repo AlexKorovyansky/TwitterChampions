@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_site"
+        android:title="@string/action_site"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+
+    <item android:id="@+id/action_dev_config"
+          android:title="@string/action_dev_config"
+          android:orderInCategory="101"
+          android:visible="@bool/dev_config_visibility"
+          android:showAsAction="never" />
+</menu>
