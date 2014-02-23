@@ -7,7 +7,7 @@ buildscript {
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.6.+'
+        classpath 'com.android.tools.build:gradle:0.7.+'
         classpath 'com.crashlytics.tools.gradle:crashlytics-gradle:1.+'
 
     }
@@ -38,17 +38,15 @@ def buildTime() {
 
 android {
     compileSdkVersion 19
-    buildToolsVersion "19.0.0"
+    buildToolsVersion "19.0.1"
 
     defaultConfig {
         minSdkVersion 7
         targetSdkVersion 19
         versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
-        buildConfig """\
-            public static final String GIT_SHA = "${gitSha()}";
-            public static final String BUILD_TIME = "${buildTime()}";
-        """
+        buildConfigField 'String', 'GIT_SHA', '"' + "${gitSha()}" + '"'
+        buildConfigField 'String', 'BUILD_TIME', '"' + "${buildTime()}'" + '"'
     }
 
     signingConfigs {
@@ -70,19 +68,17 @@ android {
 
         AndroidDev {
             flavorGroup 'topic'
-            buildConfig """\
-                public final static String[] HASH_TAGS = new String[] {"androiddev"};
-                public final static String SITE = "https://github.com/korovyansk/TwitterChampions";
-            """
+            buildConfigField 'String[]', 'HASH_TAGS', 'new String[] {"androiddev"}';
+            buildConfigField 'String', 'SITE', '"https://github.com/korovyansk/TwitterChampions"';
+
             packageName 'com.alexkorovyansky.demo.twitterchampions'
         }
 
         DevFest2013 {
             flavorGroup 'topic'
-            buildConfig """\
-                public final static String[] HASH_TAGS = new String[] {"devfest", "omsk"};
-                public final static String SITE = "http://www.gdgomsk.org/gdg-devfest-2013";
-            """
+            buildConfigField 'String[]', 'HASH_TAGS', 'new String[] {"devfest", "omsk"}';
+            buildConfigField 'String', 'SITE', '"http://www.gdgomsk.org/gdg-devfest-2013"';
+
             packageName 'org.gdgomsk.devfest2013.twitterchampions'
         }
 
